@@ -1,0 +1,11 @@
+D:\tool\SVN\HydrologySVN\develop\trunk\bin\Release\Protocol.Channel.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\bin\Release\Protocol.Channel.Interface.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\bin\Release\Protocol.Channel.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\bin\Release\Protocol.Channel.Interface.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\bin\Release\Entity.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\bin\Release\Protocol.Data.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\bin\Release\Protocol.Data.Interface.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\bin\Release\Entity.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\obj\Release\Protocol.Channel.Interface.csprojResolveAssemblyReference.cache
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\obj\Release\Protocol.Channel.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Interface\obj\Release\Protocol.Channel.Interface.pdb

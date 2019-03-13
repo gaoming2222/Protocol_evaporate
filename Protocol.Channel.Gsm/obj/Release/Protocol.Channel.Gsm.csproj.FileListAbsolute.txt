@@ -1,0 +1,13 @@
+D:\tool\SVN\HydrologySVN\develop\trunk\bin\Release\Protocol.Channel.Gsm.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\bin\Release\Protocol.Channel.Gsm.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\obj\Release\Protocol.Channel.Gsm.csprojResolveAssemblyReference.cache
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\bin\Release\Protocol.Channel.Gsm.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\bin\Release\Protocol.Channel.Gsm.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\bin\Release\Entity.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\bin\Release\Protocol.Channel.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\bin\Release\Protocol.Data.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\bin\Release\Protocol.Channel.Interface.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\bin\Release\Protocol.Data.Interface.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\bin\Release\Entity.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\obj\Release\Protocol.Channel.Gsm.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Gsm\obj\Release\Protocol.Channel.Gsm.pdb

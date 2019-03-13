@@ -1,0 +1,16 @@
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\bin\Debug\Protocol.Channel.Reservoir.dll
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\bin\Debug\Protocol.Channel.Reservoir.pdb
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\bin\Debug\Entity.dll
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\bin\Debug\Protocol.Data.Interface.dll
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\bin\Debug\Protocol.Data.Interface.pdb
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\bin\Debug\Entity.pdb
+E:\曲靖水库项目\bin\Debug\Protocol.Channel.Reservoir.dll
+E:\曲靖水库项目\bin\Debug\Protocol.Channel.Reservoir.pdb
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.csprojResolveAssemblyReference.cache
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.dll
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.pdb
+E:\蒸发版本111\bin\Debug\Protocol.Channel.Reservoir.dll
+E:\蒸发版本111\bin\Debug\Protocol.Channel.Reservoir.pdb
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.csprojResolveAssemblyReference.cache
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.dll
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.pdb

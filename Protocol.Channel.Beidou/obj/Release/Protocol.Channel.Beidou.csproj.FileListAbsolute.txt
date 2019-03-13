@@ -1,0 +1,13 @@
+D:\tool\SVN\HydrologySVN\develop\trunk\bin\Release\Protocol.Channel.Beidou.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\bin\Release\Protocol.Channel.Beidou.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\bin\Release\Protocol.Channel.Beidou.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\bin\Release\Protocol.Channel.Beidou.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\bin\Release\Entity.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\bin\Release\Protocol.Channel.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\bin\Release\Protocol.Data.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\bin\Release\Protocol.Channel.Interface.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\bin\Release\Protocol.Data.Interface.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\bin\Release\Entity.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\obj\Release\Protocol.Channel.Beidou.csprojResolveAssemblyReference.cache
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\obj\Release\Protocol.Channel.Beidou.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Channel.Beidou\obj\Release\Protocol.Channel.Beidou.pdb

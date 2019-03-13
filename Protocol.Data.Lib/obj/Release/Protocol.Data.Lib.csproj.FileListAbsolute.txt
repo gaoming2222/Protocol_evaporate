@@ -1,0 +1,11 @@
+D:\tool\SVN\HydrologySVN\develop\trunk\bin\Release\Protocol.Data.Lib.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\bin\Release\Protocol.Data.Lib.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\bin\Release\Protocol.Data.Lib.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\bin\Release\Protocol.Data.Lib.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\bin\Release\Entity.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\bin\Release\Protocol.Data.Interface.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\bin\Release\Protocol.Data.Interface.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\bin\Release\Entity.pdb
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\obj\Release\Protocol.Data.Lib.csprojResolveAssemblyReference.cache
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\obj\Release\Protocol.Data.Lib.dll
+D:\tool\SVN\HydrologySVN\develop\trunk\src\Protocol\Protocol.Data.Lib\obj\Release\Protocol.Data.Lib.pdb

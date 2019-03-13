@@ -1,0 +1,10 @@
+E:\曲靖水库项目\bin\Debug\Protocol.Channel.Cable.dll
+E:\曲靖水库项目\bin\Debug\Protocol.Channel.Cable.pdb
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.csprojResolveAssemblyReference.cache
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.dll
+E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.pdb
+E:\蒸发版本111\bin\Debug\Protocol.Channel.Cable.dll
+E:\蒸发版本111\bin\Debug\Protocol.Channel.Cable.pdb
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.csprojResolveAssemblyReference.cache
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.dll
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.pdb

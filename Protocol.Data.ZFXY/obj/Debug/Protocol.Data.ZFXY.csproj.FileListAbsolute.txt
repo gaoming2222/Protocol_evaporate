@@ -1,0 +1,10 @@
+E:\蒸发版本\bin\Debug\Protocol.Data.ZFXY.dll
+E:\蒸发版本\bin\Debug\Protocol.Data.ZFXY.pdb
+E:\蒸发版本\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.csprojResolveAssemblyReference.cache
+E:\蒸发版本\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.dll
+E:\蒸发版本\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.pdb
+E:\蒸发版本111\bin\Debug\Protocol.Data.ZFXY.dll
+E:\蒸发版本111\bin\Debug\Protocol.Data.ZFXY.pdb
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.csprojResolveAssemblyReference.cache
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.dll
+E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.pdb
