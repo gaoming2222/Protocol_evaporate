@@ -14,3 +14,10 @@ E:\蒸发版本111\bin\Debug\Protocol.Channel.Reservoir.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Reservoir.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Reservoir.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Reservoir\obj\Debug\Protocol.Channel.Reservoir.pdb

@@ -185,3 +185,10 @@ E:\蒸发版本111\bin\Debug\Protocol.Channel.Interface.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Interface\obj\Debug\Protocol.Channel.Interface.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Interface\obj\Debug\Protocol.Channel.Interface.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Interface\obj\Debug\Protocol.Channel.Interface.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Interface.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Interface.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Interface\obj\Debug\Protocol.Channel.Interface.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Interface\obj\Debug\Protocol.Channel.Interface.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Interface\obj\Debug\Protocol.Channel.Interface.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Interface\obj\Debug\Protocol.Channel.Interface.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Interface\obj\Debug\Protocol.Channel.Interface.pdb

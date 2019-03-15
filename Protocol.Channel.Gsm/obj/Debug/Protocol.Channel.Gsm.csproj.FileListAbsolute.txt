@@ -207,3 +207,11 @@ E:\蒸发版本111\bin\Debug\Protocol.Channel.Gsm.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Gsm\obj\Debug\Protocol.Channel.Gsm.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Gsm\obj\Debug\Protocol.Channel.Gsm.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Gsm\obj\Debug\Protocol.Channel.Gsm.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\gprsdll.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Gsm.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Gsm.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gsm\obj\Debug\Protocol.Channel.Gsm.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gsm\obj\Debug\Protocol.Channel.Gsm.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gsm\obj\Debug\Protocol.Channel.Gsm.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gsm\obj\Debug\Protocol.Channel.Gsm.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gsm\obj\Debug\Protocol.Channel.Gsm.pdb

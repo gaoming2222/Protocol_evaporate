@@ -220,3 +220,11 @@ E:\蒸发版本111\bin\Debug\Protocol.Channel.Gprs.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Gprs\obj\Debug\Protocol.Channel.Gprs.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Gprs\obj\Debug\Protocol.Channel.Gprs.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Gprs\obj\Debug\Protocol.Channel.Gprs.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\gprsdll.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Gprs.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Gprs.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gprs\obj\Debug\Protocol.Channel.Gprs.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gprs\obj\Debug\Protocol.Channel.Gprs.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gprs\obj\Debug\Protocol.Channel.Gprs.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gprs\obj\Debug\Protocol.Channel.Gprs.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Gprs\obj\Debug\Protocol.Channel.Gprs.pdb

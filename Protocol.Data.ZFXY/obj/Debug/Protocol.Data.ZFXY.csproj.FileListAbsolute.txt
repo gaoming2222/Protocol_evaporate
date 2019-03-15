@@ -8,3 +8,10 @@ E:\蒸发版本111\bin\Debug\Protocol.Data.ZFXY.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Data.ZFXY.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Data.ZFXY.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZFXY\obj\Debug\Protocol.Data.ZFXY.pdb

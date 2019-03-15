@@ -207,3 +207,11 @@ E:\蒸发版本111\bin\Debug\Protocol.Channel.Beidou.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Beidou\obj\Debug\Protocol.Channel.Beidou.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Beidou\obj\Debug\Protocol.Channel.Beidou.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.Beidou\obj\Debug\Protocol.Channel.Beidou.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\gprsdll.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Beidou.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Beidou.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Beidou\obj\Debug\Protocol.Channel.Beidou.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Beidou\obj\Debug\Protocol.Channel.Beidou.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Beidou\obj\Debug\Protocol.Channel.Beidou.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Beidou\obj\Debug\Protocol.Channel.Beidou.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.Beidou\obj\Debug\Protocol.Channel.Beidou.pdb

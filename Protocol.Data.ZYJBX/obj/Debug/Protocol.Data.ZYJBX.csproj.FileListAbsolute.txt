@@ -77,3 +77,10 @@ E:\蒸发版本111\bin\Debug\Protocol.Data.ZYJBX.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZYJBX\obj\Debug\Protocol.Data.ZYJBX.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZYJBX\obj\Debug\Protocol.Data.ZYJBX.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.ZYJBX\obj\Debug\Protocol.Data.ZYJBX.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Data.ZYJBX.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Data.ZYJBX.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZYJBX\obj\Debug\Protocol.Data.ZYJBX.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZYJBX\obj\Debug\Protocol.Data.ZYJBX.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZYJBX\obj\Debug\Protocol.Data.ZYJBX.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZYJBX\obj\Debug\Protocol.Data.ZYJBX.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.ZYJBX\obj\Debug\Protocol.Data.ZYJBX.pdb

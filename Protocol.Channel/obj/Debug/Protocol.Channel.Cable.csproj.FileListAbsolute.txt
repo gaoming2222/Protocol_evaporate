@@ -8,3 +8,10 @@ E:\蒸发版本111\bin\Debug\Protocol.Channel.Cable.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Cable.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.Cable.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel\obj\Debug\Protocol.Channel.Cable.pdb

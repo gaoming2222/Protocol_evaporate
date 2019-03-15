@@ -185,3 +185,10 @@ E:\蒸发版本111\bin\Debug\Protocol.Manager.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Manager\obj\Debug\Protocol.Manager.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Manager\obj\Debug\Protocol.Manager.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Manager\obj\Debug\Protocol.Manager.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Manager.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Manager.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Manager\obj\Debug\Protocol.Manager.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Manager\obj\Debug\Protocol.Manager.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Manager\obj\Debug\Protocol.Manager.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Manager\obj\Debug\Protocol.Manager.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Manager\obj\Debug\Protocol.Manager.pdb

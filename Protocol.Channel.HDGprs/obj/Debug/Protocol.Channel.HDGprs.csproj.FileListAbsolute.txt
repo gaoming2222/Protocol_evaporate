@@ -88,3 +88,10 @@ E:\蒸发版本111\bin\Debug\Protocol.Channel.HDGprs.pdb
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.HDGprs\obj\Debug\Protocol.Channel.HDGprs.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.HDGprs\obj\Debug\Protocol.Channel.HDGprs.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Channel.HDGprs\obj\Debug\Protocol.Channel.HDGprs.pdb
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.HDGprs.dll
+D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Channel.HDGprs.pdb
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.HDGprs\obj\Debug\Protocol.Channel.HDGprs.csprojAssemblyReference.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.HDGprs\obj\Debug\Protocol.Channel.HDGprs.csproj.CoreCompileInputs.cache
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.HDGprs\obj\Debug\Protocol.Channel.HDGprs.csproj.CopyComplete
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.HDGprs\obj\Debug\Protocol.Channel.HDGprs.dll
+D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Channel.HDGprs\obj\Debug\Protocol.Channel.HDGprs.pdb
