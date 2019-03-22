@@ -32,6 +32,10 @@ namespace Protocol.Data.ZFXY
         {
             ///$12345678+140331080400+1257+0251+0078+990+PP
             report = null;
+            if (!msg.Contains("+"))
+            {
+                return false;
+            }
             try
             {
                 string data = string.Empty;

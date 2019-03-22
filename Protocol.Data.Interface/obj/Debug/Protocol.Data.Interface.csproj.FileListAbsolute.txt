@@ -174,7 +174,6 @@ E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.Interface
 E:\曲靖水库项目\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.pdb
 E:\蒸发版本111\bin\Debug\Protocol.Data.Interface.dll
 E:\蒸发版本111\bin\Debug\Protocol.Data.Interface.pdb
-E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.csprojResolveAssemblyReference.cache
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.dll
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.pdb
 D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Data.Interface.dll

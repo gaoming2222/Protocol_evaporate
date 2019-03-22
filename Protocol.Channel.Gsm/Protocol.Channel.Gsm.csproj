@@ -61,6 +61,10 @@
       <Project>{D8A6FC21-B411-4E95-87ED-982BE8654252}</Project>
       <Name>Protocol.Data.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Protocol.Data.ZFXY\Protocol.Data.ZFXY.csproj">
+      <Project>{4048cc78-7a36-409b-a82a-e9a0586a4fbf}</Project>
+      <Name>Protocol.Data.ZFXY</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Protocol.Manager\Protocol.Manager.csproj">
       <Project>{5de5aa83-1f6d-45fb-be29-cd88235a2701}</Project>
       <Name>Protocol.Manager</Name>
