@@ -525,5 +525,9 @@ namespace Protocol.Data.ZYJBX
             return false;
         }
 
+        public string BuildSet(string sid, IList<EDownParamEV> cmds, CDownConfEV down, EChannelType ctype)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
