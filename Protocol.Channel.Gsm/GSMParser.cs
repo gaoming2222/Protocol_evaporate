@@ -8,10 +8,7 @@ using System.Threading;
 using Hydrology.Entity;
 using Protocol.Channel.Interface;
 using Protocol.Data.Interface;
-using Protocol.Channel.Gprs;
-using System.IO;
-using Protocol.Manager;
-
+using Protocol.Data.ZFXY;
 namespace Protocol.Channel.Gsm
 {
     public class GsmParser : IGsm
@@ -24,30 +21,21 @@ namespace Protocol.Channel.Gsm
             this.m_inputBuffer = new List<byte>();
             this.m_channelType = EChannelType.GSM;
             this.m_portType = EListeningProtType.SerialPort;
-
             this.m_stationLists = new List<CEntityStation>();
-
             IsCommonWorkNormal = false;
-
-
-            //this.Parser_3("::+8613212710080:::::17/02/26:15:00:00:::$50221G2204170226090000000000001200051902060903");
         }
 
         public void InitPort(string comPort, int baudRate)
         {
-            //InvokeMessage(String.Format("开始初始化串口{0}...", comPort), "初始化");
             ListenPort = new SerialPort()
             {
                 PortName = comPort,
                 BaudRate = baudRate,
                 //ReadTimeout = 3000,             //读超时时间 发送短信时间的需要
                 RtsEnable = true                //必须为true 这样串口才能接收到数据
-                //NewLine = "/r/n"
+                
             };
-            //InvokeMessage("......", "初始化");
             ListenPort.DataReceived += new SerialDataReceivedEventHandler(Port_DataReceived);
-            //InvokeMessage(String.Format("完成初始化串口{0}.", comPort), "初始化");
-            //Debug.WriteLine("串口初始化完成");
         }
         public bool InitGsm()
         {
@@ -55,22 +43,12 @@ namespace Protocol.Channel.Gsm
             {
                 bool isSendSuccess = false;
                 bool isClearSuccess = true;
-                //int k = 1;
                 for (int k = 1; k <= 40; k++)
                 {
                     SendCmpd(out isClearSuccess, k);
-                    //k++;
+                    
                 }
-                //int k = 1;
-                //bool isClearSuccess = true;
-                //while (isClearSuccess)
-                //{
-                //    for (int k = 1; k <= 40; k++)
-                //    {
-                //        SendCmpd(out isClearSuccess, k);
-                //        k++;
-                //    }
-                //}
+                
                 string sendat = SendAT(out isSendSuccess);
 
                 int i = 0;
@@ -165,14 +143,9 @@ namespace Protocol.Channel.Gsm
         {
             return Send(GsmHelper.AT_CMPD + i, out isSendSuccess);
         }
-
         private string Send(string msg, out bool isSendSuccess)
         {
-            //InvokeMessage(msg, "发送");
             var result = SendMsg(msg, out isSendSuccess);
-            //InvokeMessage(result, "接收");
-
-
             if (SerialPortStateChanged != null)
                 SerialPortStateChanged(this, new CEventSingleArgs<CSerialPortState>(new CSerialPortState()
                 {
@@ -215,13 +188,6 @@ namespace Protocol.Channel.Gsm
                 InvokeMessage(String.Format("开启串口{0}失败", ListenPort.PortName), "初始化");
                 Debug.WriteLine("[GSM] Model " + exp.Message);
             }
-            //if (SerialPortStateChanged != null)
-            //    SerialPortStateChanged(this, new CEventSingleArgs<CSerialPortState>(new CSerialPortState()
-            //    {
-            //        PortNumber = Int32.Parse(ListenPort.PortName.Replace("COM", "")),
-            //        BNormal = ListenPort.IsOpen,
-            //        PortType = m_portType
-            //    }));
             return false;
 
         }
@@ -236,16 +202,9 @@ namespace Protocol.Channel.Gsm
             {
                 Debug.WriteLine("[GSM] Model " + exp.Message);
             }
-            //if (SerialPortStateChanged != null)
-            //    SerialPortStateChanged(this, new CEventSingleArgs<CSerialPortState>(new CSerialPortState()
-            //     {
-            //         PortNumber = Int32.Parse(ListenPort.PortName.Replace("COM", "")),
-            //         BNormal = ListenPort.IsOpen,
-            //         PortType = m_portType
-            //     }));
         }
 
-        private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        private void Port_DataReceived_old(object sender, SerialDataReceivedEventArgs e)
         {
             int n = ListenPort.BytesToRead;
             byte[] buf = new byte[n];
@@ -259,16 +218,14 @@ namespace Protocol.Channel.Gsm
                 string data = Encoding.ASCII.GetString(m_inputBuffer.ToArray<byte>());
                 if (data.Contains("CMT"))
                 {
-                    if (data.EndsWith("\r\n"))
+                    if (data.EndsWith(";"))
                     {
                         string[] a = new string[] { "CMT" };
                         string[] ArrData = data.Split(a, StringSplitOptions.None);
                         for (int i = 1; i < ArrData.Count(); i++)
                         {
-                            //TODO 
-                            Thread t = new Thread(new ParameterizedThreadStart(Parser_3));
+                            Thread t = new Thread(new ParameterizedThreadStart(parse_Updata));
                             t.Start(ArrData[i]);
-                            //  Parser_2(ArrData[i]);
                             Debug.WriteLine(ArrData[i]);
                             m_inputBuffer.Clear();
                         }
@@ -325,316 +282,76 @@ namespace Protocol.Channel.Gsm
             }
 
         }
-        private void Parser_1(Object str)
+
+
+        private void Port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            try
+            int n = ListenPort.BytesToRead;
+            byte[] buf = new byte[n];
+            ListenPort.Read(buf, 0, n);
+            m_inputBuffer.AddRange(buf);
+            //获取结束符号的位置
+            var count = (from r in m_inputBuffer where (r == 59) select r).Count();
+            Debug.WriteLine(count + " ----- " + Encoding.ASCII.GetString(buf));
+            string tmp = Encoding.ASCII.GetString(m_inputBuffer.ToArray<byte>());
+            if (tmp.Contains("$"))
             {
-                string data = str as string;
-                string[] arrstr = data.Split(',');
-                /* 删除 '\r\n' 字符串 */
-                //while (data.StartsWith("\r\n"))
-                //{
-                //    data = data.Substring(2);
-                //}
-                /*  
-                 * 解析数据，获取CGSMStruct 
-                 */
-                var gsm = new CGSMStruct();
-                //if (!GsmHelper.Parse(data, out gsm))
-                //    return;
-                if (!GsmHelper.ParseGsm(arrstr[0], arrstr[1], arrstr[2], out gsm))
-                    return;
-                /*  如果解析成功，触发GSM数据接收完成事件  */
-                InvokeMessage(data, "接收");
-
-                string msg = string.Empty;
-                if (!ProtocolHelpers.DeleteSpecialChar(gsm.Message, out msg))
-                    return;
-
-                if (!msg.ToUpper().Contains("TRU"))
+                string data = Encoding.ASCII.GetString(m_inputBuffer.ToArray<byte>());
+                //判定短信接收的标志符号
+                if (data.Contains("CMT"))
                 {
-                    string sid = msg.Substring(0, 4);
-                    string type = msg.Substring(4, 2);
-
-                    /* 
-                     *  上行指令信息，
-                     *  或者读取参数返回的信息 
-                     */
-                    #region 1G
-                    if (type == "1G")
+                    if (data.EndsWith(";"))
                     {
-                        string reportType = msg.Substring(6, 2);
-                        /*  定时报，加报 */
-                        if (reportType == "21" || reportType == "22")
+                        string[] a = new string[] { "CMT" };
+                        //按CMT划分字符串
+                        string[] ArrData = data.Split(a, StringSplitOptions.None);
+                        for (int i = 1; i < ArrData.Count(); i++)
                         {
-                            //  YAC设备的墒情协议：
-                            string stationType = msg.Substring(8, 2);
-                            switch (stationType)
-                            {
-                                //  站类为04时墒情站 05墒情雨量站 06，16墒情水位站 07，17墒情水文站
-                                case "04":
-                                case "05":
-                                case "06":
-                                case "07":
-                                case "17":
-                                    {
-                                    }
-                                    break;
-                                //  站类为01,02,03,12,13时，不是墒情站
-                                case "01":
-                                case "02":
-                                case "03":
-                                case "12":
-                                case "13":
-                                    {
-                                        CReportStruct report = new CReportStruct();
-                                        if (Up.Parse(msg, out report)) /* 解析成功 */
-                                        {
-                                            report.ChannelType = EChannelType.GSM;
-                                            report.ListenPort = "COM" + this.ListenPort.PortName;
-                                            report.flagId = gsm.PhoneNumber;
-                                            if (this.UpDataReceived != null)
-                                                this.UpDataReceived.Invoke(null, new UpEventArgs() { Value = report, RawData = data });
-                                        }
-                                    }
-                                    break;
-                                default:
-                                    break;
-                            }
-
+                            //增加一层调用，支持多线程
+                            Thread t = new Thread(new ParameterizedThreadStart(parse_Updata));
+                            t.Start(ArrData[i]);
                         }
-                        else if (reportType == "11")    //  人工水位
-                        {
-
-                        }
-                        else if (reportType == "23")    //  人工流量
-                        {
-
-                        }
-                        else if (reportType == "25")
-                        {
-                        }
-                        else /* 下行指令 */
-                        {
-                            CDownConf downconf = new CDownConf();
-                            if (Down.Parse(msg, out downconf)) /* 解析成功 */
-                            {
-                                if (this.DownDataReceived != null)
-                                    this.DownDataReceived.Invoke(null, new DownEventArgs() { Value = downconf, RawData = data });
-                            }
-                        }
+                        //如果判定到结束符号，则清空缓冲区
+                        m_inputBuffer.Clear();
                     }
-
-                    #endregion
-
-                    #region 1K
-                    if (type == "1K") /* 批量传输 */
-                    {
-                        var station = FindStationBySID(sid);
-                        if (station == null)
-                            throw new Exception("批量传输，站点传输类型匹配错误");
-                        //  EStationBatchType batchType = station.BatchTranType;
-
-                        //if (batchType == EStationBatchType.EFlash)          /* Flash传输 */
-                        //{
-                        CBatchStruct batch = new CBatchStruct();
-                        if (FlashBatch.Parse(gsm.Message, out batch)) /* 解析成功 */
-                        {
-                            if (this.BatchDataReceived != null)
-                                this.BatchDataReceived.Invoke(null, new BatchEventArgs() { Value = batch, RawData = data });
-                        }
-                        //}
-                        //else if (batchType == EStationBatchType.EUPan)  /* U盘传输 */
-                        //{
-                        //    CBatchStruct batch = new CBatchStruct();
-                        //    if (UBatch.Parse(gsm.Message, out batch))   /* 解析成功 */
-                        //    {
-                        //        if (this.BatchDataReceived != null)
-                        //            this.BatchDataReceived.Invoke(null, new BatchEventArgs() { Value = batch, RawData = data });
-                        //    }
-                        //}
-                        else
-                            throw new Exception("批量传输，站点传输类型匹配错误");
-                    }
-                    #endregion
-
-                    #region 1S
-                    if (type == "1S") /* 远地下行指令，设置参数 */
-                    {
-                        CDownConf downconf = new CDownConf();
-                        if (Down.Parse(gsm.Message, out downconf))/* 解析成功 */
-                        {
-                            if (this.DownDataReceived != null)
-                                this.DownDataReceived.Invoke(null, new DownEventArgs() { Value = downconf, RawData = data });
-                        }
-                    }
-                    #endregion
                 }
-                else
-                {
-                    if (this.ErrorReceived != null)
-                        this.ErrorReceived.Invoke(null, new ReceiveErrorEventArgs() { Msg = data });
-                }
-            }
-            catch (Exception exp)
-            {
-                Debug.WriteLine(exp.Message);
             }
         }
 
-        private void Parser(object str)
+        /// <summary>
+        /// 处理上行数据报文
+        /// </summary>
+        /// <param name="updata"></param>
+        private void parse_Updata(object updata)
         {
-            try
+            //初始话
+            string datagram = updata as string;
+            var gsm = new CGSMStruct();
+            if (!GsmHelper.Parse_2(datagram, out gsm))
+                return;
+            IUp upParser = new UpParse();
+            //TODO 增加router，根据站点绑定调用协议
+            CReportStruct report = new CReportStruct();
+            
+            if (Up.Parse(datagram, out report)) /* 解析成功 */
             {
-                string data = str as string;
-                /* 删除 '\r\n' 字符串 */
-                while (data.StartsWith("\r\n"))
-                {
-                    data = data.Substring(2);
-                }
-                /*  
-                 * 解析数据，获取CGSMStruct 
-                 */
-                var gsm = new CGSMStruct();
-                if (!GsmHelper.Parse(data, out gsm))
-                    return;
-                /*  如果解析成功，触发GSM数据接收完成事件  */
-                InvokeMessage(data, "接收");
-
-                string msg = string.Empty;
-                if (!ProtocolHelpers.DeleteSpecialChar(gsm.Message, out msg))
-                    return;
-
-                if (!msg.ToUpper().Contains("TRU"))
-                {
-                    string sid = msg.Substring(0, 4);
-                    string type = msg.Substring(4, 2);
-
-                    /* 
-                     *  上行指令信息，
-                     *  或者读取参数返回的信息 
-                     */
-                    #region 1G
-                    if (type == "1G")
-                    {
-                        string reportType = msg.Substring(6, 2);
-                        /*  定时报，加报 */
-                        if (reportType == "21" || reportType == "22")
-                        {
-                            //  YAC设备的墒情协议：
-                            string stationType = msg.Substring(8, 2);
-                            switch (stationType)
-                            {
-                                //  站类为04时墒情站 05墒情雨量站 06，16墒情水位站 07，17墒情水文站
-                                case "04":
-                                case "05":
-                                case "06":
-                                case "07":
-                                case "17":
-                                    {
-                                    }
-                                    break;
-                                //  站类为01,02,03,12,13时，不是墒情站
-                                case "01":
-                                case "02":
-                                case "03":
-                                case "12":
-                                case "13":
-                                    {
-                                        CReportStruct report = new CReportStruct();
-                                        if (Up.Parse(msg, out report)) /* 解析成功 */
-                                        {
-                                            report.ChannelType = EChannelType.GSM;
-                                            report.ListenPort = "COM" + this.ListenPort.PortName;
-                                            report.flagId = gsm.PhoneNumber;
-                                            if (this.UpDataReceived != null)
-                                                this.UpDataReceived.Invoke(null, new UpEventArgs() { Value = report, RawData = data });
-                                        }
-                                    }
-                                    break;
-                                default:
-                                    break;
-                            }
-
-                        }
-                        else if (reportType == "11")    //  人工水位
-                        {
-
-                        }
-                        else if (reportType == "23")    //  人工流量
-                        {
-
-                        }
-                        else if (reportType == "25")
-                        {
-                        }
-                        else /* 下行指令 */
-                        {
-                            CDownConf downconf = new CDownConf();
-                            if (Down.Parse(msg, out downconf)) /* 解析成功 */
-                            {
-                                if (this.DownDataReceived != null)
-                                    this.DownDataReceived.Invoke(null, new DownEventArgs() { Value = downconf, RawData = data });
-                            }
-                        }
-                    }
-
-                    #endregion
-
-                    #region 1K
-                    if (type == "1K") /* 批量传输 */
-                    {
-                        var station = FindStationBySID(sid);
-                        if (station == null)
-                            throw new Exception("批量传输，站点传输类型匹配错误");
-                        //  EStationBatchType batchType = station.BatchTranType;
-
-                        //if (batchType == EStationBatchType.EFlash)          /* Flash传输 */
-                        //{
-                        CBatchStruct batch = new CBatchStruct();
-                        if (FlashBatch.Parse(gsm.Message, out batch)) /* 解析成功 */
-                        {
-                            if (this.BatchDataReceived != null)
-                                this.BatchDataReceived.Invoke(null, new BatchEventArgs() { Value = batch, RawData = data });
-                        }
-                        //}
-                        //else if (batchType == EStationBatchType.EUPan)  /* U盘传输 */
-                        //{
-                        //    CBatchStruct batch = new CBatchStruct();
-                        //    if (UBatch.Parse(gsm.Message, out batch))   /* 解析成功 */
-                        //    {
-                        //        if (this.BatchDataReceived != null)
-                        //            this.BatchDataReceived.Invoke(null, new BatchEventArgs() { Value = batch, RawData = data });
-                        //    }
-                        //}
-                        else
-                            throw new Exception("批量传输，站点传输类型匹配错误");
-                    }
-                    #endregion
-
-                    #region 1S
-                    if (type == "1S") /* 远地下行指令，设置参数 */
-                    {
-                        CDownConf downconf = new CDownConf();
-                        if (Down.Parse(gsm.Message, out downconf))/* 解析成功 */
-                        {
-                            if (this.DownDataReceived != null)
-                                this.DownDataReceived.Invoke(null, new DownEventArgs() { Value = downconf, RawData = data });
-                        }
-                    }
-                    #endregion
-                }
-                else
-                {
-                    if (this.ErrorReceived != null)
-                        this.ErrorReceived.Invoke(null, new ReceiveErrorEventArgs() { Msg = data });
-                }
+                report.ChannelType = EChannelType.GSM;
+                report.ListenPort = "COM" + this.ListenPort.PortName;
+                report.flagId = gsm.PhoneNumber;
+                if (this.UpDataReceived != null)
+                    this.UpDataReceived.Invoke(null, new UpEventArgs() { Value = report, RawData = datagram });
             }
-            catch (Exception exp)
-            {
-                Debug.WriteLine(exp.Message);
-            }
+
         }
+        /// <summary>
+        /// 处理下行回复报文
+        /// </summary>
+        /// <param name="downdata"></param>
+        private void parse_Downdata(object downdata)
+        {
+
+        }
+
 
         private void Parser_2(object str)
         {
@@ -1329,7 +1046,30 @@ namespace Protocol.Channel.Gsm
                 catch (Exception ex) { }
                 return false;
             }
+            public static bool ParseGsmStruct(String data, out CGSMStruct gsm)
+            {
+                gsm = new CGSMStruct();
+                try
+                {
+                    //  解析GSM号码
+                    gsm.PhoneNumber = data.Substring(5, 11);
+                    //  解析时间
+                    string time = data.Substring(21, 20);
+                    int year = Int32.Parse("20" + time.Substring(0, 2));  //  年       yy
+                    int month = Int32.Parse(time.Substring(3, 2)); //  月       mm
+                    int day = Int32.Parse(time.Substring(6, 2));   //  日       dd
+                    int hour = Int32.Parse(time.Substring(9, 2));  //  小时      hh
+                    int minute = Int32.Parse(time.Substring(12, 2));//  分钟   mm  
+                    int second = Int32.Parse(time.Substring(15, 2));//  秒   second  
+                    gsm.Time = new DateTime(year, month, day, hour, minute, second);
+                    //  解析数据包
+                    gsm.Message = data.Substring(42).Trim();
 
+                    return true;
+                }
+                catch (Exception ex) { }
+                return false;
+            }
             public static bool Parse_2(String data, out CGSMStruct gsm)
             {
                 gsm = new CGSMStruct();
