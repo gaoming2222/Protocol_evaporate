@@ -178,7 +178,6 @@ E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.Interface\ob
 E:\蒸发版本111\hydro\Protocol_Universal-dev-ZYJBX\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.pdb
 D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Data.Interface.dll
 D:\proj\Hydro_Evaporate\bin\Debug\Protocol.Data.Interface.pdb
-D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.csprojAssemblyReference.cache
 D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.csproj.CoreCompileInputs.cache
 D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.csproj.CopyComplete
 D:\proj\Hydro_Evaporate\src\Protocol\Protocol.Data.Interface\obj\Debug\Protocol.Data.Interface.dll
