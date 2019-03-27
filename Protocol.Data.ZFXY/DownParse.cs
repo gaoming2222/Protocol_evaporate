@@ -22,6 +22,41 @@ namespace Protocol.Data.ZFXY
 {
     public class DownParse : IDown
     {
+        public String BuildSet(string sid, IList<EDownParamEV> cmds, CDownConfEV down, EChannelType ctype)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("at+");//AT指令头
+            foreach (var cmd in cmds)
+            {
+                switch (cmd)
+                {
+                    case EDownParamEV.Clock://时钟命令
+                        sb.Append("cclk=\"");
+                        sb.Append(down.Date);
+                        sb.Append("\"");
+                        break;
+
+                    case EDownParamEV.TelephoneNum://目的手机卡号命令
+                        sb.Append("cpbw=1,\"");
+                        sb.Append(down.TelephoneNumD);
+                        sb.Append("\",129,\"DestID\"");
+                        break;
+
+                    case EDownParamEV.ID://ID号命令
+                        sb.Append("cpbw=2,\"");
+                        sb.Append(down.ID);
+                        sb.Append("\",129,\"ID\"");
+                        break;
+
+                    case EDownParamEV.HeightLimit://液位限制命令
+                        sb.Append("cpbw=3,\"");
+                        sb.Append(down.HeightLimit);
+                        sb.Append("\",129,\"Hight\"");
+                        break;
+                }
+            }
+            return sb.ToString();
+        }
         public string BuildQuery(string sid, IList<EDownParam> cmds, EChannelType ctype)
         {
             throw new NotImplementedException();

@@ -38,6 +38,8 @@ namespace Protocol.Data.Interface
         /// </summary>
         String BuildSet(string sid, IList<EDownParam> cmds, CDownConf down, EChannelType ctype);
 
+        String BuildSet(string sid, IList<EDownParamEV> cmds, CDownConfEV down, EChannelType ctype);
+
         /// <summary>
         /// 解析查询后的数据
         /// </summary>
