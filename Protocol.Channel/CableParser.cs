@@ -12,6 +12,7 @@ using Protocol.Channel.Reservoir;
 using Protocol.Data.ZYJBX;
 
 using System.IO;
+using Protocol.Manager;
 
 /************************************************************************************
 * Copyright (c) 2018 All Rights Reserved.
@@ -269,7 +270,10 @@ namespace Protocol.Channel.Cable
                     Thread.Sleep(1000);
                     string data = string.Empty;
                     string rawdata = System.Text.Encoding.ASCII.GetString(m_inputBuffer.ToArray());
-                    InvokeMessage(rawdata, "原始数据");
+                    WriteToFileClass writeClass = new WriteToFileClass("ReceivedLog");
+                    Thread t = new Thread(new ParameterizedThreadStart(writeClass.WriteInfoToFile));
+                    t.Start("GPRS： " + "长度：" + rawdata.Length + " " + rawdata + "\r\n");
+                    //InvokeMessage(rawdata, "原始数据");
                     if (rawdata == null || rawdata == "")
                     {
                         continue;
@@ -282,7 +286,7 @@ namespace Protocol.Channel.Cable
                     m_inputBuffer.Clear();
                     string temp = rawdata.Trim();
                     string result = string.Empty;
-                    InvokeMessage(temp, "原始数据");
+                    //InvokeMessage(temp, "原始数据");
                     //TODO 判定结束符
                     if (rawdata.Contains("$"))
                     {
@@ -303,7 +307,7 @@ namespace Protocol.Channel.Cable
                                         report.ListenPort = "COM" + this.Port.PortName;
                                         if (this.UpDataReceived != null)
                                         {
-                                            InvokeMessage(oneGram, "接收");
+                                            InvokeMessage(oneGram, "[CABLE]接收");
                                             this.UpDataReceived.Invoke(null, new UpEventArgs() { Value = report, RawData = oneGram });
                                         }
                                     }

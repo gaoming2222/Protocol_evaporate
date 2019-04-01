@@ -11,6 +11,7 @@ using System.IO;
 //using Protocol.Data.Lib;
 //using Protocol.Data.SXDZ;
 using Protocol.Data.ZYJBX;
+using Protocol.Manager;
 //using Protocol.Data.XYJBX;
 
 
@@ -370,8 +371,12 @@ namespace Protocol.Channel.HDGprs
                         HDModemDataStruct dat = dataListTmp[i];
                         string data = System.Text.Encoding.Default.GetString(dat.m_data_buf);
                         string temp = data.Trim();
+                        WriteToFileClass writeClass = new WriteToFileClass("ReceivedLog");
+                        Thread t = new Thread(new ParameterizedThreadStart(writeClass.WriteInfoToFile));
+                        t.Start("GPRS： " + "长度：" + data.Length + " " + data + "\r\n");
                         if (temp.Contains("$"))
                         {
+
                             string[] dataList = temp.Split('$');
                             //数据解析
                             for (int j = 0; i < dataList.Length; j++)
@@ -388,7 +393,7 @@ namespace Protocol.Channel.HDGprs
                                     report.ListenPort = this.GetListenPort().ToString();
                                     if (this.UpDataReceived != null)
                                     {
-                                        //InvokeMessage(oneGram, "接收");
+                                        InvokeMessage(dataGram, "[GPRS]接收");
                                         this.UpDataReceived.Invoke(null, new UpEventArgs() { Value = report, RawData = temp });
                                     }
                                 }

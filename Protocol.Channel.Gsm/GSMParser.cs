@@ -9,6 +9,8 @@ using Hydrology.Entity;
 using Protocol.Channel.Interface;
 using Protocol.Data.Interface;
 using Protocol.Data.ZFXY;
+using Protocol.Manager;
+
 namespace Protocol.Channel.Gsm
 {
     public class GsmParser : IGsm
@@ -294,6 +296,9 @@ namespace Protocol.Channel.Gsm
             var count = (from r in m_inputBuffer where (r == 59) select r).Count();
             Debug.WriteLine(count + " ----- " + Encoding.ASCII.GetString(buf));
             string tmp = Encoding.ASCII.GetString(m_inputBuffer.ToArray<byte>());
+            WriteToFileClass writeClass = new WriteToFileClass("ReceivedLog");
+            Thread t = new Thread(new ParameterizedThreadStart(writeClass.WriteInfoToFile));
+            t.Start("GPRS： " + "长度：" + tmp.Length + " " + tmp + "\r\n");
             if (tmp.Contains("$"))
             {
                 string data = Encoding.ASCII.GetString(m_inputBuffer.ToArray<byte>());
@@ -339,7 +344,11 @@ namespace Protocol.Channel.Gsm
                 report.ListenPort = "COM" + this.ListenPort.PortName;
                 report.flagId = gsm.PhoneNumber;
                 if (this.UpDataReceived != null)
+                {
+                    InvokeMessage(datagram, "[GSM]接收");
                     this.UpDataReceived.Invoke(null, new UpEventArgs() { Value = report, RawData = datagram });
+
+                }
             }
 
         }

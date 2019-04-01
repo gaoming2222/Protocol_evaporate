@@ -67,6 +67,10 @@
       <Project>{a0ad42d3-79da-44c8-a475-6a3e360fcdce}</Project>
       <Name>Protocol.Data.ZYJBX</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Protocol.Manager\Protocol.Manager.csproj">
+      <Project>{5DE5AA83-1F6D-45FB-BE29-CD88235A2701}</Project>
+      <Name>Protocol.Manager</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
