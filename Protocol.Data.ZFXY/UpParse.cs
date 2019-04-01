@@ -75,15 +75,15 @@ namespace Protocol.Data.ZFXY
                     }
                     if(i == 1)
                     {
-                        if (dataList[i].Length == 12)
+                        if (dataList[i].Length == 14)
                         {
                             dataTime = new DateTime(
-                                year: Int32.Parse("20" + dataList[i].Substring(0, 2)),
-                                month: Int32.Parse(dataList[i].Substring(2, 2)),
-                                day: Int32.Parse(dataList[i].Substring(4, 2)),
-                                hour: Int32.Parse(dataList[i].Substring(6, 2)),
-                                minute: Int32.Parse(dataList[i].Substring(8, 2)),
-                                second: Int32.Parse(dataList[i].Substring(10, 2))
+                                year: Int32.Parse(dataList[i].Substring(0, 4)),
+                                month: Int32.Parse(dataList[i].Substring(4, 2)),
+                                day: Int32.Parse(dataList[i].Substring(6, 2)),
+                                hour: Int32.Parse(dataList[i].Substring(8, 2)),
+                                minute: Int32.Parse(dataList[i].Substring(10, 2)),
+                                second: Int32.Parse(dataList[i].Substring(12, 2))
                             );
                             reportData.Time = dataTime;
                             continue;
@@ -91,29 +91,34 @@ namespace Protocol.Data.ZFXY
                         else
                         {
                             System.Diagnostics.Debug.Write("数据：" + msg);
-                            System.Diagnostics.Debug.Write("站号格式不对");
+                            System.Diagnostics.Debug.Write("时间格式不对");
                             return false;
                         }
                     }
-                    if (i == 2)
+                    else if (i == 2)
                     {
                         reportData.Voltge = Decimal.Parse(dataList[i]) * (Decimal)0.01;
+                        continue;
                     }
-                    if (i == 3)
+                    else if (i == 3)
                     {
                         reportData.Rain = Decimal.Parse(dataList[i]) * (Decimal)0.01;
+                        continue;
                     }
-                    if(i == 4)
+                    else if(i == 4)
                     {
                         reportData.Evp = Decimal.Parse(dataList[i]) * (Decimal)0.01;
+                        continue;
                     }
-                    if (i == 5)
+                    else if (i == 5)
                     {
                         reportData.Temperature = Decimal.Parse(dataList[i]) * (Decimal)0.01;
+                        continue;
                     }
-                    if(i == 6)
+                    else if(i == 6)
                     {
                         reportData.EvpType = dataList[i];
+                        continue;
                     }
                 }
                 datas.Add(reportData);
@@ -131,6 +136,7 @@ namespace Protocol.Data.ZFXY
             {
                 System.Diagnostics.Debug.Write("数据：" + msg);
                 System.Diagnostics.Debug.Write("格式不对");
+                return false;
             }
             return true;
         }

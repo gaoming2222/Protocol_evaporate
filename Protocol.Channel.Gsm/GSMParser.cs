@@ -227,6 +227,7 @@ namespace Protocol.Channel.Gsm
                             Thread t = new Thread(new ParameterizedThreadStart(parse_Updata));
                             t.Start(ArrData[i]);
                             Debug.WriteLine(ArrData[i]);
+                            InvokeMessage(ArrData[i],"GSM接收：");
                             m_inputBuffer.Clear();
                         }
                     }
@@ -300,7 +301,7 @@ namespace Protocol.Channel.Gsm
                 //判定短信接收的标志符号
                 if (data.Contains("CMT"))
                 {
-                    if (data.EndsWith(";"))
+                    if (data.EndsWith("\r\n"))
                     {
                         string[] a = new string[] { "CMT" };
                         //按CMT划分字符串
@@ -332,8 +333,10 @@ namespace Protocol.Channel.Gsm
             IUp upParser = new UpParse();
             //TODO 增加router，根据站点绑定调用协议
             CReportStruct report = new CReportStruct();
-            
-            if (Up.Parse(datagram, out report)) /* 解析成功 */
+
+            string data = datagram.Substring(datagram.IndexOf("$")).Replace(";","");
+
+            if (Up.Parse(data, out report)) /* 解析成功 */
             {
                 report.ChannelType = EChannelType.GSM;
                 report.ListenPort = "COM" + this.ListenPort.PortName;
@@ -1076,7 +1079,7 @@ namespace Protocol.Channel.Gsm
                 try
                 {
                     //  解析GSM号码
-                    gsm.PhoneNumber = data.Substring(5, 11);
+                    gsm.PhoneNumber = data.Substring(data.IndexOf("+86")+3, 11);
                     //  解析时间
                     string time = data.Substring(21, 20);
                     int year = Int32.Parse("20" + time.Substring(0, 2));  //  年       yy
