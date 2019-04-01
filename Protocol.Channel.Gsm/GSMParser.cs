@@ -314,8 +314,8 @@ namespace Protocol.Channel.Gsm
                         for (int i = 1; i < ArrData.Count(); i++)
                         {
                             //增加一层调用，支持多线程
-                            Thread t = new Thread(new ParameterizedThreadStart(parse_Updata));
-                            t.Start(ArrData[i]);
+                            Thread t1 = new Thread(new ParameterizedThreadStart(parse_Updata));
+                            t1.Start(ArrData[i]);
                         }
                         //如果判定到结束符号，则清空缓冲区
                         m_inputBuffer.Clear();
