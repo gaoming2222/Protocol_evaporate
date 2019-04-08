@@ -53,6 +53,7 @@
     <Compile Include="Xml\XmlDllInfo.cs" />
     <Compile Include="Xml\XmlDllInfos.cs" />
     <Compile Include="Xml\XmlDocManager.cs" />
+    <Compile Include="Xml\XmlEvaInfo.cs" />
     <Compile Include="Xml\XmlMember.cs" />
     <Compile Include="Xml\XmlMemberInfos.cs" />
     <Compile Include="Xml\XmlStationDataSerializer.cs" />
